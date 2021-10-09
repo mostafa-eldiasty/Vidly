@@ -4,20 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using System.Data.Entity;
 using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        List<Movie> movies = new List<Movie>{
-                new Movie{Id=1,Name = "Shrek"},
-                new Movie{Id=2,Name = "Wall-e"}
-            };
-        //
-        // GET: /Movies/
+        ApplicationDbContext _Context;
+
+        public MoviesController()
+        {
+            _Context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _Context.Dispose();
+        }
+
         public ActionResult Index()
         {
+            var movies = _Context.Movies.Include(x=>x.Genre).ToList();
             return View(movies);
         }
 	}

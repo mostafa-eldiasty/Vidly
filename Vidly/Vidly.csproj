@@ -21,6 +21,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -172,22 +174,44 @@
     <Compile Include="Migrations\202110052003330_InitialModel.Designer.cs">
       <DependentUpon>202110052003330_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110052125014_AddModel.cs" />
-    <Compile Include="Migrations\202110052125014_AddModel.Designer.cs">
-      <DependentUpon>202110052125014_AddModel.cs</DependentUpon>
+    <Compile Include="Migrations\202110081904413_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\202110081904413_AddIsSubscribedToCustomer.designer.cs">
+      <DependentUpon>202110081904413_AddIsSubscribedToCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110062206027_InitialModel1.cs" />
-    <Compile Include="Migrations\202110062206027_InitialModel1.Designer.cs">
-      <DependentUpon>202110062206027_InitialModel1.cs</DependentUpon>
+    <Compile Include="Migrations\202110081936337_AddMembershipType.cs" />
+    <Compile Include="Migrations\202110081936337_AddMembershipType.designer.cs">
+      <DependentUpon>202110081936337_AddMembershipType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110062251027_IntialModel.cs" />
-    <Compile Include="Migrations\202110062251027_IntialModel.Designer.cs">
-      <DependentUpon>202110062251027_IntialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202110081951554_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202110081951554_PopulateMembershipTypes.designer.cs">
+      <DependentUpon>202110081951554_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110081959012_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\202110081959012_ApplyAnnotationsToCustomerName.designer.cs">
+      <DependentUpon>202110081959012_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110082223580_AddNamePropertyToMembershipType.cs" />
+    <Compile Include="Migrations\202110082223580_AddNamePropertyToMembershipType.designer.cs">
+      <DependentUpon>202110082223580_AddNamePropertyToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110082237418_AddBirthdatePropertyToCustomer.cs" />
+    <Compile Include="Migrations\202110082237418_AddBirthdatePropertyToCustomer.designer.cs">
+      <DependentUpon>202110082237418_AddBirthdatePropertyToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110082305281_AddAdditionalPropertiesToMovie.cs" />
+    <Compile Include="Migrations\202110082305281_AddAdditionalPropertiesToMovie.designer.cs">
+      <DependentUpon>202110082305281_AddAdditionalPropertiesToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110090025562_AddGenre.cs" />
+    <Compile Include="Migrations\202110090025562_AddGenre.designer.cs">
+      <DependentUpon>202110090025562_AddGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -246,6 +270,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -261,14 +286,29 @@
     <EmbeddedResource Include="Migrations\202110052003330_InitialModel.resx">
       <DependentUpon>202110052003330_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110052125014_AddModel.resx">
-      <DependentUpon>202110052125014_AddModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110081904413_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>202110081904413_AddIsSubscribedToCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110062206027_InitialModel1.resx">
-      <DependentUpon>202110062206027_InitialModel1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110081936337_AddMembershipType.resx">
+      <DependentUpon>202110081936337_AddMembershipType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110062251027_IntialModel.resx">
-      <DependentUpon>202110062251027_IntialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110081951554_PopulateMembershipTypes.resx">
+      <DependentUpon>202110081951554_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110081959012_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>202110081959012_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110082223580_AddNamePropertyToMembershipType.resx">
+      <DependentUpon>202110082223580_AddNamePropertyToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110082237418_AddBirthdatePropertyToCustomer.resx">
+      <DependentUpon>202110082237418_AddBirthdatePropertyToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110082305281_AddAdditionalPropertiesToMovie.resx">
+      <DependentUpon>202110082305281_AddAdditionalPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110090025562_AddGenre.resx">
+      <DependentUpon>202110090025562_AddGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

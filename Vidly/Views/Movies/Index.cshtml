@@ -9,17 +9,15 @@
 
 <table class="table">
     <tr>
-        <th>
-            Movie
-        </th>
+        <th>Movie</th>
+        <th>Genre</th>
     </tr>
 
 @foreach (var movie in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => movie.Name)
-        </td>
-    </tr>
+<tr>
+    <td>@Html.DisplayFor(modelItem => movie.Name)</td>
+    <td>@Html.DisplayFor(modelItem => movie.Genre.Name)</td>
+</tr>
 }
 
 </table>
