@@ -206,10 +206,14 @@
     <Compile Include="Migrations\202110090025562_AddGenre.designer.cs">
       <DependentUpon>202110090025562_AddGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110090027246_PopulateGenre.cs" />
+    <Compile Include="Migrations\202110090027246_PopulateGenre.designer.cs">
+      <DependentUpon>202110090027246_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
-    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -271,6 +275,7 @@
     <Content Include="Views\Customers\index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -309,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110090025562_AddGenre.resx">
       <DependentUpon>202110090025562_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110090027246_PopulateGenre.resx">
+      <DependentUpon>202110090027246_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

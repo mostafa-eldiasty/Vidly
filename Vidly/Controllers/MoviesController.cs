@@ -28,5 +28,11 @@ namespace Vidly.Controllers
             var movies = _Context.Movies.Include(x=>x.Genre).ToList();
             return View(movies);
         }
-	}
+
+        public ActionResult Details()
+        {
+            var movie = _Context.Movies.Include(x => x.Genre).SingleOrDefault();
+            return View(movie);
+        }
+    }
 }
