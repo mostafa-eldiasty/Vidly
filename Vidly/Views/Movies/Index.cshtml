@@ -7,6 +7,7 @@
 
 <h2>Movies</h2>
 
+@Html.ActionLink("NEW MOVIE","New",null,new { @class = "btn btn-primary"})
 <table class="table">
     <tr>
         <th>Movie</th>
@@ -15,7 +16,7 @@
 
 @foreach (var movie in Model) {
 <tr>
-    <td><a href="/Movies/Details/@movie.Id">@Html.DisplayFor(modelmovie => movie.Name)</a></td>
+    <td><a href="/Movies/Edit/@movie.Id">@Html.DisplayFor(modelmovie => movie.Name)</a></td>
     <td>@Html.DisplayFor(modelItem => movie.Genre.Name)</td>
 </tr>
 }

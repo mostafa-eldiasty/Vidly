@@ -23,7 +23,7 @@ else
     @foreach (var customer in Model)
     {
         <tr>
-            <td><a href="/Customers/Details/@customer.Id">@Html.DisplayFor(modelcustomer => customer.Name)</a></td>
+            <td><a href="/Customers/Edit/@customer.Id">@Html.DisplayFor(modelcustomer => customer.Name)</a></td>
 
             <td>@customer.MembershipType.Name</td>
         </tr>
