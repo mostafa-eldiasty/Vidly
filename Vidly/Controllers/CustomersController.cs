@@ -25,8 +25,7 @@ namespace Vidly.Controllers
         
         public ActionResult Index()
         {
-            var custopmers = _Context.Customers.Include(x => x.MembershipType).ToList();
-            return View(custopmers);
+            return View();
         }
 
         [HttpPost]
