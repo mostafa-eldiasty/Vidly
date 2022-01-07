@@ -22,5 +22,8 @@ namespace Vidly.Models
         [Display(Name = "Genre")]
         [Required]
         public byte GenreId { get; set; }
+
+        [Range(1, 20)]
+        public int NumberAvaliable { get; set; }
     }
 }
