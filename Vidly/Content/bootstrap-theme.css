@@ -1,0 +1,21 @@
+﻿.navbar-inverse .navbar-brand  {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navbar-inverse {
+    background-color: #FF665A;
+    border-color: #FF665A;
+}
+
+.tt-suggestion {
+    background-color: yellow;
+}
+
